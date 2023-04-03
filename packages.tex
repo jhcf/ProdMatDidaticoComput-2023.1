@@ -1,0 +1,281 @@
+%\usepackage[numbers]{natbib} % Tidies up citation numbers.
+
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber,backref=true,style=abnt,natbib=true,repeatfields=true,pretty=true,noslsn=true]{biblatex}
+%\usepackage[backend=biber,style=abnt,natbib=true,refsegment=chapter,backref=true,backrefstyle=three,repeatfields=true,pretty=true,noslsn=true]{biblatex}
+\usepackage{csquotes}
+
+\usepackage{graphicx}
+\usepackage{pythonhighlight}
+\usepackage{listingsutf8}
+\usepackage{float}
+
+%\def\UrlBreaks{\do\/\do-}
+\usepackage[T1]{fontenc}
+\usepackage{url}[hyphens]
+%\usepackage[anythingbreaks]{breakurl}
+
+\usepackage{pdfpages}
+
+\lstset{
+  extendedchars=true,
+  language=java,
+  basicstyle=\tiny\ttfamily,
+  showspaces=false,
+  showstringspaces=false,
+    literate=
+     {É}{{\'E}}{1}%
+      {Á}{{\'A}}{1}%
+      {Ã}{{\~A}}{1}%
+      {Â}{{\^A}}{1}%
+      {À}{{\`A}}{1}%
+      {Ç}{{\,C}}{1}%
+      {Ó}{{\'O}}{1}%
+      {Í}{{\'I}}{1}%
+      {Õ}{{\~O}}{1}%
+      {Ú}{{\'U}}{1}%
+      {ú}{{\'u}}{1}%
+      {é}{{\'e}}{1}%
+      {á}{{\'a}}{1}%
+      {ã}{{\~a}}{1}%
+      {à}{{\`a}}{1}%
+      {â}{{\^a}}{1}%
+      {ç}{{\,c}}{1}%
+      {ó}{{\'o}}{1}%
+      {í}{{\'i}}{1}%
+      {õ}{{\~o}}{1}%
+}
+
+\lstset{
+  extendedchars=true,
+  language=python,
+  basicstyle=\tiny\ttfamily,
+  showspaces=false,
+  showstringspaces=false,
+    literate=
+     {É}{{\'E}}{1}%
+      {Á}{{\'A}}{1}%
+      {Ã}{{\~A}}{1}%
+      {Â}{{\^A}}{1}%
+      {À}{{\`A}}{1}%
+      {Ç}{{\,C}}{1}%
+      {Ó}{{\'O}}{1}%
+      {Í}{{\'I}}{1}%
+      {Õ}{{\~O}}{1}%
+      {Ú}{{\'U}}{1}%
+      {ú}{{\'u}}{1}%
+      {é}{{\'e}}{1}%
+      {á}{{\'a}}{1}%
+      {ã}{{\~a}}{1}%
+      {à}{{\`a}}{1}%
+      {â}{{\^a}}{1}%
+      {ç}{{\,c}}{1}%
+      {ó}{{\'o}}{1}%
+      {í}{{\'i}}{1}%
+      {õ}{{\~o}}{1}%
+}
+
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstdefinelanguage{XML}
+{
+ numbers=left,
+ numberstyle=\tiny,
+ stepnumber=1,
+ numbersep=8pt,
+ morestring=[b]",
+ morestring=[s]{>}{<},
+ morecomment=[s]{<?}{?>},
+ stringstyle=\color{black},
+ identifierstyle=\color{darkblue},
+ keywordstyle=\color{cyan},
+ morekeywords={xmlns,version,type}% list your attributes here
+}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\tiny\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{É}{{\'E}}{1}%
+      {Á}{{\'A}}{1}%
+      {Ã}{{\~A}}{1}%
+      {Â}{{\^A}}{1}%
+      {À}{{\`A}}{1}%
+      {Ç}{{\,C}}{1}%
+      {Ó}{{\'O}}{1}%
+      {Í}{{\'I}}{1}%
+      {Õ}{{\~O}}{1}%
+      {Ú}{{\'U}}{1}%
+      {ú}{{\'u}}{1}%
+      {é}{{\'e}}{1}%
+      {á}{{\'a}}{1}%
+      {ã}{{\~a}}{1}%
+      {à}{{\`a}}{1}%
+      {â}{{\^a}}{1}%
+      {ç}{{\,c}}{1}%
+      {ó}{{\'o}}{1}%
+      {í}{{\'i}}{1}%
+      {õ}{{\~o}}{1}%
+     {0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+\lstdefinelanguage{SPARQL}{
+    basicstyle=\tiny\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     {É}{{\'E}}{1}%
+      {Á}{{\'A}}{1}%
+      {Ã}{{\~A}}{1}%
+      {Â}{{\^A}}{1}%
+      {À}{{\`A}}{1}%
+      {Ç}{{\,C}}{1}%
+      {Ó}{{\'O}}{1}%
+      {Í}{{\'I}}{1}%
+      {Õ}{{\~O}}{1}%
+      {Ú}{{\'U}}{1}%
+      {ú}{{\'u}}{1}%
+      {é}{{\'e}}{1}%
+      {á}{{\'a}}{1}%
+      {ã}{{\~a}}{1}%
+      {à}{{\`a}}{1}%
+      {â}{{\^a}}{1}%
+      {ç}{{\,c}}{1}%
+      {ó}{{\'o}}{1}%
+      {í}{{\'i}}{1}%
+      {õ}{{\~o}}{1},%
+  morekeywords={
+    SELECT,CONSTRUCT,DESCRIBE,ASK,WHERE,FROM,NAMED,PREFIX,BASE,OPTIONAL,
+    FILTER,GRAPH,LIMIT,OFFSET,SERVICE,UNION,EXISTS,NOT,BINDINGS,MINUS,a
+  }
+}
+
+\lstdefinelanguage{overpassQL}{
+    basicstyle=\tiny\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background}
+}
+
+\lstset{language=R,
+    literate=
+    {<-}{{$\gets$}}1%
+     {É}{{\'E}}{1}%
+     {Ê}{{\^E}}{1}%
+      {Á}{{\'A}}{1}%
+      {Ã}{{\~A}}{1}%
+      {Â}{{\^A}}{1}%
+      {À}{{\`A}}{1}%
+      {Ç}{{\,C}}{1}%
+      {Ó}{{\'O}}{1}%
+      {Í}{{\'I}}{1}%
+      {Õ}{{\~O}}{1}%
+      {Ú}{{\'U}}{1}%
+      {ú}{{\'u}}{1}%
+      {ê}{{\^e}}{1}%
+      {é}{{\'e}}{1}%
+      {á}{{\'a}}{1}%
+      {ã}{{\~a}}{1}%
+      {à}{{\`a}}{1}%
+      {â}{{\^a}}{1}%
+      {ç}{{\,c}}{1}%
+      {ó}{{\'o}}{1}%
+      {í}{{\'i}}{1}%
+      {õ}{{\~o}}{1},%
+    basicstyle=\tiny\ttfamily,
+    stringstyle=\color{red},
+    otherkeywords={0,1,2,3,4,5,6,7,8,9},
+    morekeywords={TRUE,FALSE},
+    deletekeywords={data,frame,length,as,character},
+    keywordstyle=\color{blue},
+    commentstyle=\color{red},
+}
+
+\usepackage[brazil]{babel}  
+\usepackage{xcolor}
+%xcolor v2.12 (2016/05/11)384  Colors by Name4.1  Base colors (always available)black blue brown cyan darkgray gray green lightgray lime magenta olive orange pink purple red teal violet white yellow
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+
+\usepackage[nopostdot]{glossaries}
+\setglossarystyle{altlist}
+
+% gerador de lero-lero
+\usepackage{lipsum}
+
+\newenvironment{itquote}
+{\begin{quote}\itshape}
+{\end{quote}}
+
+\usepackage[todonotes={textsize=footnotesize,portuguese}]{changes}
+
+\presetkeys%
+    {todonotes}%
+    {inline,backgroundcolor=yellow}{}
+\usepackage{datetime2}
+
+\usepackage{booktabs}
+
+\usepackage{siunitx,array}
+
+\usepackage{caption}
+
+\usepackage{csvsimple} % para leitura de arquivos csv
+
+\usepackage{fancyhdr,ragged2e}
+\fancyhead{}
+\lhead{\parbox[t]{0.35\textwidth}{\RaggedRight\rightmark\strut}}
+\rhead{\parbox[t]{0.63\textwidth}{\RaggedLeft\leftmark\strut}}
+\setlength{\headheight}{5\baselineskip}
+
+\usepackage
+%[final]
+{changes}
+%\usepackage{changes}
+%\url{https://ctan.org/pkg/changes}
+

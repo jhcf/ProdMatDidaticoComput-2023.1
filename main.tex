@@ -1,0 +1,86 @@
+ \documentclass[12pt]{book}
+%https://www.overleaf.com/project/629e18789b6baeb860fd2545
+\input{packages}
+\input{packages-estudantes}
+
+% define cores personalizadas para o texto de cada autor
+\input{autores} 
+
+\makenoidxglossaries
+\loadglsentries{1-Introducao/tarefas/T2-Glossario/estudantes/main}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+%\captionsetup[table]{name=Quadro}
+\renewcommand{\lstlistingname}{Listagem de Código}
+
+\newcommand{\dataset}{\textit{dataset}}
+\newcommand{\query}{\textit{query}}
+\newcommand{\githubusername}{\textless githubusername\textgreater}
+
+\def\printpart{1} % Orientações Gerais, Introdução e Fundamentos de Pesquisa Bibliográfica
+
+% Substitua o valor de printpart por 1, 2, 3, 4 ou 5, conforme a parte do documento que você quer gerar 
+\def\printpart{1}
+
+\setlength{\headheight}{73.04742pt}
+\addtolength{\oddsidemargin}{-1.5cm}
+\addtolength{\evensidemargin}{-1.5cm}
+\addtolength{\textwidth}{3cm}
+\addtolength{\topmargin}{-3cm}
+\addtolength{\textheight}{2cm}
+
+\addbibresource{ESLC.bib}
+	
+\begin{document}
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+\clearpage
+\thispagestyle{empty}
+
+\begin{titlepage}
+\begin{center}
+ {\huge\bfseries \includegraphics[width=4cm]{unb-logo.jpg}\\
+	CIC0209+CIC0208 - Supervisão e Produção de Material Didático (em Computação) - 2023.1\\
+ Notas e Registros.
+ Ler em \url{https://www.overleaf.com/read/prnzjbfzrwzs}\\
+ % ----------------------------------------------------------------
+ \vspace{1.5cm}
+{\large	% author names and affiliations
+	Jorge Henrique Cabral Fernandes (jhcf)\\
+    Livia Santos Brisolla ()\\
+    Edison Ishikawa ()\\
+ }
+	\vspace{1.5cm}
+	{\large Brasília, \DTMnow }}
+\end{center}
+\end{titlepage}
+	%\date{10 de março de 2021}
+	% make the title area
+    %\maketitle
+    \listoftodos
+	\printnoidxglossary
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\clearpage
+\pagenumbering{arabic}
+
+\pagestyle{fancy}
+
+	\chapter*{Resumo}
+
+	Este documento contém notas de aula e registros  produzidos pelos professores e turma das disciplinas CIC0208 - PRODUÇÃO DE MATERIAL DIDÁTICO - Turma 01	e CIC0209 - SUPERVISÃO DE PRODUÇÃO DE MATERIAL DIDÁTICO - Turma 02 do semestre 2023.1.
+	
+\part{Preparação\label{part:intro}}
+
+\part{Teoria do Material Didático\label{part:teoria}}
+
+
+\part{Prática do Material Didático\label{part:pratica}}
+
+\part{Conclusões\label{part:conclusões}}
+
+\label{referencias}
+    \printbibliography
+
+\end{document}

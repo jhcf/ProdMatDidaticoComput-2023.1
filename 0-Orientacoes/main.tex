@@ -1,0 +1,204 @@
+\chapter{Orientações Iniciais\label{orientacoes:iniciais}}
+
+Leia atentamente as orientações a seguir, tendo em vista que lhe auxiliarão no melhor desempenho neste curso-disciplina. 
+
+\section{Importância deste documento}
+
+Este documento contém e conterá o registro de todas as suas evidências de aprendizagem na disciplina-turma, e as dos demais estudantes que fazem parte do curso Computação Experimental.
+
+Estaremos tratando esse documento como um ambiente experimental, de laboratório, e a organização regular do laboratório será essencial para o seu bom desempenho.
+
+Desse modo, quando for editar este documento tome cuidado para sempre deixá-lo em plena condição compilável, e sem Erros nem Warnings, que podem prejudicar as atividades dos demais estudantes, bem como a do professor. 
+
+O documento atualmente contém apenas um Warning, e nenhum erro. Antes de encerrar seu trabalho na realização das tarefas da disciplina resolva qualquer Erro ou \textit{Warning} causados pela sua edição, com especial atenção para duplicidade de rótulos.
+A introdução de qualquer erro ou warning que prejudicar o trabalho dos demais colegas, se não solucionada em tempo hábil, poderá implicar em penalização das tarefas.
+
+\textbf{Não será avaliada tarefa} de estudante cujo código \LaTeX~ esteja gerando erros na compilação do \LaTeX. O código que gera um erro pode e deve ser eliminado da compilação no \LaTeX~ pelo professor ou por qualquer estudante, por meio da colocação d eum comentário \LaTeX~ sobre o \textit{input} da tarefa (\verb|\input{}|), e a tarefa correspondente poderá não ser avaliada.
+
+Sempre observe a \textbf{Lista de Tarefas Pendentes}, no início do documento, para verificar se há alguma pendência associada ao seu usuário, que pode ter sido inserida pelo professor. 
+
+Todos os pacotes de trabalho que você depositar neste ``laboratório'' deverão ser acessíveis, de forma direta ou indireta, a partir do arquivo ``main.tex'', no diretório raiz.
+
+\textbf{Não será avaliada tarefa} cujo código, texto etc, não estiver inserido de forma direta ou indireta no main.tex do projeto Overleaf.
+
+\section{Uso sincronizado de Repositório no Github e Overleaf: Repositório \textbf{origin}}
+
+Todo o código deste documento está na plataforma Overleaf.com, mantido sincronizado como o repositório CE-20221 na plataforma Github.com, disponível na url \url{https://github.com/jhcf/Comput-Experim-20221-Parte1}, que será doravante denominado repositório \textbf{origin}.
+
+O acesso de gravação no repositório \textbf{origin} ser-lhe-á concedido pelo professor do curso ao final da primeira semana de aula.
+
+Dessa forma, para poder realizar a disciplina todos os estudantes devem ter uma conta pessoal em github.com, bem como uma conta pessoal em overleaf.com. Inicie registrando o seu nome completo e \textbf{github username} no arquivo autores.tex, onde você também deve escolher uma cor para uso no registro de alterações, conforme disponível no pacote ``changes''.
+
+Adicionalmente, insira o seu nome completo e username git no documento main.tex, a partir da linha 46, onde aparecem o nome dos autores deste documento. Siga o modelo apresentado.
+
+\section{Ingresso no grupo Zotero ``RESIC'', para  compartilhar referências bibliográficas com a turma}
+
+Você deve cadastrar-se como usuário do Zotero, e registrar-se no grupo Zotero de compartilhamento de referências bibliográficas RESIC, onde devem ser produzidas as referências bibliográficas usadas para quaisquer citações neste documento.
+
+A inscrição no grupo Zotero é feita no endereço abaixo:
+\url{https://www.zotero.org/groups/2465026/resic}
+
+\begin{quote}
+Para facilitar seu trabalho, você deve instalar a versão \textit{standalone} do Zotero em uma máquina de seu uso, a fim de ter acesso facilitado à base de referências bibliográficas a ser usada durante a execução da disciplina. Caso não instale, poderá acessar a base diretamente pelo navegador, mas não poderá exportar todo o conteúdo da biblioteca para o Zotero. Essa exportação só funciona com o uso da aplicação \textit{standalone}.
+\end{quote}
+
+Após ingressar no grupo Zotero, visite a referência ao livro ``Complex Adaptive Systems: An introduction to computational models of social life'', que está dentro da coleção ``Complexity -> Complex Adaptive Systems (CAS)''.
+
+Busque acessar o livro completo ou o seu sumário, como disponível em \url{https://www.google.com.br/books/edition/Complex_Adaptive_Systems/XQUHZC8wcdMC}. Se possível adquira o livro em formato digital ou impresso. Ele será usado como referência para discussões avançadas sobre simulação, mais adiante na disciplina.
+
+Veja o que contém o sumário do livro, parte do prefácio e introdução, e use o Zotero para adicionar uma pequena nota com sua impressão inicial sobre o livro, vinculada a essa referência. A Nota deve conter o seu nome completo e qualquer observação que você ache relevante, sobre o livro referenciado. Fazer isso vai atestar que você sabe minimamente usar o Zotero.
+
+Depois de registrar uma nota vinculada à referência do livro citado, use o Zotero para exportar essa referência no formato / estilo ABNT [use a opção ``Create Bibliography'' no Zotero online, ou ``criar bibliografia a partir do item selecionado''  no Zotero standalone], e deposite o texto da referência formatada no texto online da Tarefa T1 - Registrando-se no grupo Zotero de compartilhamento de referências bibliográficas, no ambiente Overleaf/LaTeX e no repositório github da disciplina (ver Moodle/Aprender da disciplina).
+
+\section{Depósito dos pacotes de trabalho referentes à execução das tarefas}
+
+A execução de toda e qualquer tarefa pontuável neste curso é feita por meio do depósito de um pacote de trabalho no repositório, contendo textos, programas de computador e outros dados coletados e (ou) analisados. 
+
+Todos os textos e códigos no repositório devem estar em formato não compactado. Apenas os arquivos de dados muito grandes devem ser compactados em formato zip. Não usar rar, gz etc. 
+
+Não serão avaliados trabalhos que apresentarem inconsistências internas, cópia de figuras e textos de outros estudantes.
+
+\section{Python3.7}
+
+Para realizar com sucesso essa disciplina você vai ter que programar em Python. Não se trata de aprender programação avançada, mas se ainda não sabe escrever, compilar e executar programas em Python, vai ter que aprender, e deverá pedir ajuda ao professor ou aos demais colegas, em caso de dúvidas. Todos os exercícios de programação Python aqui desenvolvidos devem ser feitos com a versão 3.7, ou superior.
+
+\section{R e RStudio}
+
+R é a linguagem mais fácil para usar pacotes estatísticos, e para aprender a realizar análise exploratória de dados e verificação estatística de hipóteses você vai ter que programar em R, preferencialmente usando o ambiente RStudio. 
+
+O professor vai fazer uma introdução ao ambiente RStudio e à linguagem R, mas você pode se adiantar e começar escrever e executar scripts em Python, e deverá pedir ajuda ao professor ou aos demais colegas, em caso de dúvidas. Todos os exercícios de análise exploratória de dados e verificação estatística de hipóteses devem ser feitos R e RStudio, e você vai ter que depositar esses códigos em resposta a algumas tarefas.
+
+\subsection{Arquivos que não devem ser depositados no repositório}
+
+Em nenhuma hipótese devem ser depositados no repositório:
+\begin{itemize}
+    \item Arquivos com tamanho superior a 30 MB;
+    \item Arquivos de controle de projeto VSCODE (.vscode) ou Python (*.pyc). 
+    Para evitar o depósito desse tipo de arquivo, sempre que for criar um repositório de produtos específicos da disciplina coloque na raiz do seu repositório um .gitignore com, no mínimo, o conteúdo a seguir indicado;
+    \begin{verbatim}
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyc
+
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+.vscode
+.vscode/
+    \end{verbatim}
+\end{itemize}
+
+Todo pacote de trabalho a ser avaliado precisa estar integralmente armazenado no Repositório CE-20221 / origin (e consequentemente sincronizável com o Overleaf).
+
+\subsection{Onde depositar os pacotes de trabalho?}
+
+Toda e qualquer inserção de texto, programa de computador, dados, enfim, qualquer documento, feito por estudante, deve ocorrer em um dos seguintes pontos:
+\begin{enumerate}
+    \item Dentro de um subdiretório com o código da tarefa, no diretório de \textit{labs} ou de \textit{exploratory-data-analysis} do estudante, onde o nome do diretório de \texttt{labs} ou de \textit{exploratory-data-analysis} de um estudante é o seu github username (veja, por exemplo, o professor, que tem como github username: jhcf);
+    \item Dentro dos diretórios ``tarefas'', nos diretórios dos temas de estudo;
+    \item No arquivo ``autores.tex'';
+    \item No arquivo ``packages-estudantes.tex'', onde eventualmente podem ser inseridos novos pacotes para apoiar o uso de algum recurso específico; e
+    \item Na substituição do arquivo RESIC.bib por outro mais recente, obtido pela exportação completa da biblioteca RESIC que se encontra na plataforma Zotero, na url \url{https://www.zotero.org/groups/2465026/resic}.
+\end{enumerate}
+
+Não serão avaliados os pacotes de trabalhos entregues em local distinto do especificado, ou não acessíveis por meio do output em PDF, resultante da compilação de ``main.tex''.
+
+\section{Entrega das tarefas}
+
+Toda pontuação concedida a estudante será feita mediante:
+\begin{enumerate}
+    \item Sincronização plena entre o documento no Overleaf.com e o repositório no Github.com;
+    \item O registro de execução da correspondente tarefa no ambiente Moodle do curso, feita pelo estudante até o limite de prazo informado;
+\end{enumerate}
+
+Todas as tarefas realizadas nesta disciplina são individuais. 
+%, cada um dos membros do grupo deve obrigatoriamente fazer o registro da execução da tarefa, com as mesmas informações. Os membros do grupo devem evitar qualquer duplicação de código e textos no Overleaf. Ou seja, depositar os pacotes de trabalho referentes a cada tarefa em apenas um dos diretórios de experimentos de um dos membros do grupo. Até o final do curso, todos os membros de um grupo devem aparecer como produtores de pelo menos um pacote de trabalho feito pelo grupo.
+
+\section{Escrevendo o texto}
+
+Cuidados ao escrever texto:
+\begin{description}
+\item [Reconhecimento de autorias] Faça citações a textos e ideias que não são de sua autoria, usando referências registradas no grupo Zotero RESIC. Sempre informe os nomes completos dos autores dos relatórios, logo após o título do relatório;
+\item [Grafia] A boa ortografia e gramática são essenciais à valorização de um trabalho. Descuido com essa questão revela, de forma geral, descuido e (ou) desinteresse pelo próprio trabalho, influenciando a pontuação obtida;
+\item [Referências a códigos e dados] Toda e qualquer de escrita de relatório deverá fazer referência explícita ao diretório no Repositório, onde se encontram os códigos e dados usados para produção do relatório. No ambiente Moodle não será aceita a entrega de arquivos compactados contendo os resultados de realização das tarefas;
+\end{description}
+
+\section{Organização do ambiente experimental}
+
+A organização do ambiente experimental de cada estudante é essencial para a realização adequada das tarefas.
+Alguns dos problemas típicos que refletem descuido com a organização do trabalho de laboratório, são:
+
+\begin{enumerate}
+\item Problemas com merge durante operação no repositório git;
+\item Uso inadequado de caracteres com acentuação nos nomes dos arquivos;
+\item Não informar os ponteiros adequados, seja por meio das tags \LaTeX~ input e (ou) includepdf, de modo que a tarefa fica inacessível e invisível na tabela de conteúdos gerada a partir da compilação do documento main.tex.
+\end{enumerate}
+
+Sugere-se ao estudante usar linux para agilizar a realização de suas tarefas, bem como aprender a usar a linha de comando do git.
+
+\subsection{Problemas com merge durante operações de push no Git}
+
+Cada estudante é inteiramente responsável por fazer os merges manuais para entrega de sua tarefa no Repositório, caso o branch correspondente ao seu pacote de trabalho não consiga ser feito de forma automática no Overleaf. 
+
+Estudantes que deixarem merges em conflito, prejudicando o processo de envio dos trabalhos dos demais, poderão perder pontos pela não entrega do trabalho no prazo, bem como pelo conflito causado para os demais estudantes. 
+
+Busque informações sobre como resolver merges no livro Pro Git \cite{chacon_pro_2014}, ou em  urls como \url{https://www.zotero.org/groups/2465026/resic/collections/C7BG9S2W/items/HCY5X8PT/note/9M2BFISL/collection}
+
+\subsection{Uso inadequado de nomes para arquivos}
+
+Devido ao fato de que estaremos trabalhando em um ambiente laboratorial compartilhado, com uso de muitas linguagens combinadas, como \LaTeX, Python e R, entre outras, é fundamental adotar um padrão de nomeação para arquivos e diretórios. Atualmente esse padrão é composto pelas seguintes regras:
+\begin{enumerate}
+    \item Não use caracteres de acentuação em nomes de arquivos;
+    \item Não use espaço em branco em nomes de arquivos;
+    \item Não use underline em nomes de arquivos. Usar hífen em vez de Underline;
+    \item Para nomes de arquivos longos use a \url{https://pt.wikipedia.org/wiki/CamelCase}, e eventualmente misture com o uso de hifens, para melhor legibilidade.
+\end{enumerate}
+
+\subsection{Não colocar os ponteiros adequados para que a tarefa seja visível}
+
+É necessário que todo trabalho a ser avaliado esteja visível a partir da tabela de conteúdos gerada pela compilação do documento main.tex, sejam em um capítulo, seção ou subseção em \LaTeX.
