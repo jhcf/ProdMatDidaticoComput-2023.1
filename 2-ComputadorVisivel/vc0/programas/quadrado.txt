@@ -1,0 +1,78 @@
+quadrado:
+	READ a;
+	PUSH a;
+	PUSH a;
+	CALL multiplica;
+	POP qa;
+	WRITE qa;
+	LOAD a;
+	JNZ quadrado;
+  STOP;
+multiplica:
+	POP return_;
+	POP x;
+	POP y;
+	ACC 0;
+	STORE acumulador;
+	ACC 0;
+	STORE contador;
+testa:
+	PUSH contador;
+	PUSH y;
+	CALL menorque;
+	POP ehmmenor;
+	LOAD ehmenor;
+	JNZ soma;
+	PUSH acumulador;
+	PUSH return_;
+	RETURN;
+soma:
+	LOAD acumulador;
+	ADD x;
+	STORE acumulador;
+	ACC 1;
+	ADD contador;
+	STORE contador;
+	JUMP testa;
+menorque:
+	POP retorno__;
+	POP n2;
+	POP n1;
+	ACC 1;
+	STORE um;
+inicia_comparacao:
+	LOAD n1;
+	JNZ testa_n2;
+	JUMP testa_final_n2;
+testa_n2:
+	LOAD n2;
+	JNZ subtrai_todos;
+	JUMP n1_maior;
+subtrai_todos:
+	LOAD n1;
+	SUB um;
+	STORE n1;
+	LOAD n2;
+	SUB um;
+	STORE n2;
+	JUMP inicia_comparacao;
+testa_final_n2:
+	LOAD n2;
+	JNZ n1_menor;
+	JUMP iguais;
+n1_menor:
+	ACC 1;
+	STORE resultado;
+	JUMP retorna;
+iguais:
+	ACC 0;
+	STORE resultado;
+	JUMP retorna;
+n1_maior:
+	ACC 0;
+	STORE resultado;
+	JUMP retorna;
+retorna:
+	PUSH resultado;
+	PUSH endereco_retorno;
+	RETURN;

@@ -1,0 +1,8 @@
+// programa que imprime a soma entre dois números digitados
+READ 20;   // lê primeiro valor (V1) e armazena em 20
+READ 21;   // lê segundo valor (V2) e armazena em 21
+LOAD 20;   // carrega o primeiro valor (V1) no acumulador
+ADD 21;    // adiciona ao acumulador o segundo valor (V1) 
+STORE 22;  // armazena em RAM[22] o valor do acumulador (V1+V2)
+WRITE 22;  // escreve (V1+V2) no dispositivo de saída
+STOP;      // pára a execução do programa<br>

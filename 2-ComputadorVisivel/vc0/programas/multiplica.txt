@@ -1,0 +1,26 @@
+READ a1 
+READ a2
+
+ACC 1
+STORE um
+
+ACC 0
+STORE produto
+
+teste:
+LOAD a2
+JNZ acumula
+JUMP imprime
+
+acumula:
+LOAD produto
+ADD a1
+STORE produto
+LOAD a2
+SUB um
+STORE a2
+JUMP teste
+
+imprime:
+WRITE produto
+STOP

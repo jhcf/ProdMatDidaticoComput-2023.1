@@ -1,0 +1,5 @@
+// Imprime 123
+ACC 123;     // carrega no acumulador o valor 123
+STORE 10;    // armazena na posição de memória 10 o valor 123
+WRITE 10;    // envia para o dispositivo de saída o valor 123
+STOP;        // encerra a execução do programa

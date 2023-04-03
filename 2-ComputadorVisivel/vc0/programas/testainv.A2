@@ -1,0 +1,6 @@
+READ A 
+LOAD A 
+INV 
+STORE A 
+WRITE A 
+STOP

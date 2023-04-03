@@ -1,0 +1,15 @@
+inicio:
+	ACC 1
+	STORE um
+	ACC 15
+	STORE contador
+teste:
+	LOAD contador
+	JNZ escreva
+	STOP
+escreva:
+	WRITE contador
+subtraia:
+	SUB um
+	STORE contador
+	JUMP teste

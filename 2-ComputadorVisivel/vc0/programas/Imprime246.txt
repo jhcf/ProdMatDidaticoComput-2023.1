@@ -1,0 +1,7 @@
+// Imprime 246
+ACC 123;     //carrega no acumulador o valor 123
+STORE 10;    // armazena 123 na posicao 10
+ADD 10;      // adiciona ao acumulador (que contém 123) o valor 123 (na RAM)
+STORE 11;    // armazena em RAM[11] o valor do acumulador (256)
+WRITE 11;    // escreve o valor de RAM[11] no dispositivo de saída
+STOP;        // pára a execução do programa

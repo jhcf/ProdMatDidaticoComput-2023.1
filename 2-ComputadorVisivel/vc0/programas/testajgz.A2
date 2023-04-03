@@ -1,0 +1,15 @@
+inicializa:
+   ACC 0
+   STORE zero
+   ACC 1
+   STORE um
+teste1:
+   READ NUMERO
+   LOAD NUMERO
+   JGZ maior
+menorouigual:
+   WRITE zero
+   STOP
+maior:
+   WRITE um
+   STOP
