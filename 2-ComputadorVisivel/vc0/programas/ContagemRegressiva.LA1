@@ -1,0 +1,16 @@
+; Este programa faz contagem regressiva de um número informado na entrada de dados pelo usuário
+inicio:
+	ACC 1 			; armazena 1 no acumulador
+	STORE um                ; declara uma variável "um" e armazena neça o valor do acumulador
+	ACC 12			; armazena 12 no acumulador
+	STORE contador		; declara uma variável "contador" e armazena neça o valor do acumulador
+teste:
+	LOAD contador
+	JNZ escreva
+	STOP
+escreva:
+	WRITE contador
+subtraia:
+	SUB um
+	STORE contador
+	JUMP teste

@@ -1,4 +1,4 @@
-// Imprime 246
+; Soma 123 + 123 e Imprime 246
 ACC 123;     //carrega no acumulador o valor 123
 STORE 10;    // armazena 123 na posicao 10
 ADD 10;      // adiciona ao acumulador (que contém 123) o valor 123 (na RAM)

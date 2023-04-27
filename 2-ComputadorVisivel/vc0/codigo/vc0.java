@@ -8,6 +8,7 @@
  * Uso irrestrito para fins educacionais e não lucrativos.
  * Free use only for educational and nonprofit purposes
 */
+
 public class vc0 {
 
   // all units of the computer are declared below
@@ -29,11 +30,19 @@ public class vc0 {
     inputDevice = new InputDevice();
     outputDevice = new OutputDevice();
     memory = new Memory(memorySize);
-    cpu = new CPU(memory, inputDevice, outputDevice);
+    cpu = new CPU();
+    cpu.setBus(memory, inputDevice, outputDevice);
   }
 
+  vc0 (InputDevice in, OutputDevice out, Memory mem, CPU cpu1) {
+    this.inputDevice = in;
+    this.outputDevice = out;
+    this.memory = mem;
+    this.cpu = cpu1;
+    this.cpu.setBus(mem,in,out);
+  }
   void loadProgram(int startPosition, short[] instructions, boolean trace) {
-    if (trace) IO.println("PROGRAM LENGTH = ["+instructions.length+"]");
+    if (trace) IODrivers.println("PROGRAM LENGTH = ["+instructions.length+"]");
     for (short i = 0; i < instructions.length; i++) {
       memory.write((short)(startPosition+i), instructions[i]);
     }
@@ -58,25 +67,33 @@ public class vc0 {
 
   public static String getArchitectureHelp() {
     return 
-      "******* VC0's MACRO ARCHITECTURE DESCRIPTION *****					\n"+
-      "Brief Architeture Description								\n"+
-      "    Small general purpose computer formed by a CPU, memory and i/o devices.		\n"+
-      "    16 bits words.									\n"+
-      "    instruction set composed by 10 instructions.						\n"+
-      "Architectural Elements									\n"+
-      "1 - Central Processing Unit								\n"+
-      "    1.1 - ACC - General purpose register							\n"+
-      "    1.2 - IP (Instruction Pointer) - Points to the next instruction to be executed	\n"+
-//      "    1.3 - SP (Stack Pointer) - Points to the top of the operand stack			\n"+
-      "2 - I/O Devices										\n"+
-      "    2.1 - INPUT_DEVICE - Receives data from user's console				\n"+
-      "    2.2 - OUTPUT_DEVICE - Shows data in user's console					\n"+
-      "3 - Memory										\n"+
-      "    3.1 - MEM - 1024 words * 16 bits = 2048 bytes memory					\n"+
-      "******* END VC0's ARCHITECTURE DESCRIPTION *******					\n";
+      "******* VC0's MACRO ARCHITECTURE DESCRIPTION *****                    \n"+
+      "Brief Architeture Description                                \n"+
+      "    Small general purpose computer formed by a CPU, memory and i/o devices.        \n"+
+      "    16 bits words.                                    \n"+
+      "    instruction set composed by 10 instructions.                        \n"+
+      "Architectural Elements                                    \n"+
+      "1 - Central Processing Unit                                \n"+
+      "    1.1 - ACC - General purpose register                            \n"+
+      "    1.2 - IP (Instruction Pointer) - Points to the next instruction to be executed    \n"+
+      "    1.3 - IR (Instruction Registre) - Stroes the next instruction being executed    \n"+
+//      "    1.3 - SP (Stack Pointer) - Points to the top of the operand stack            \n"+
+      "2 - I/O Devices                                        \n"+
+      "    2.1 - INPUT_DEVICE - Receives data from user's console                \n"+
+      "    2.2 - OUTPUT_DEVICE - Shows data in user's console                    \n"+
+      "3 - Memory                                        \n"+
+      "    3.1 - MEM - X words * 16 bits = x*16 bits memory                    \n"+
+      "******* END VC0's ARCHITECTURE DESCRIPTION *******                    \n";
   }
   static void printArchitectureHelp() {
-    IO.println(getArchitectureHelp());
+    IODrivers.println(getArchitectureHelp());
+  }
+  void print() {
+    printArchitectureHelp();
+    inputDevice.print();
+    outputDevice.print();
+    memory.print();
+    cpu.print();
   }
 }
 

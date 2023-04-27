@@ -11,6 +11,9 @@
 class OutputDevice {
   // para fins de saída de dados os valores são armazenados com sinal (short)
   void write(short value) {
-    IO.println(value);
+    IODrivers.println(value);
+  }
+  void print() {
+    IODrivers.println("OUTPUT_DEVICE - Presents data in user's console");
   }
 }

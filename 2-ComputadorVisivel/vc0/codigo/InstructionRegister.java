@@ -18,4 +18,7 @@ class InstructionRegister extends Register {
   String dumpState() {
     return InstructionSet.toString(value);
   }
+  void print() {
+    IODrivers.println(dumpState());
+  }
 }

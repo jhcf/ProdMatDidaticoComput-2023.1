@@ -18,7 +18,7 @@ public class Compiler {
 
 
   public static short[] compileFile(String fileName) {
-      String program = Loader.readFile(fileName,true);
+      String program = IODrivers.readFile(fileName,true);
       try {
         short[] machineCode = Compiler.compile(program, true);
         return machineCode;
@@ -31,12 +31,16 @@ public class Compiler {
   // returns the array of instructions as result
   public static short[] compile(String program, boolean trace) throws Exception {
     try {
-      if (trace) IO.println("BEGIN BUILDING SYMBOL TABLE");
-      SymbolTable symbolTable = buildSymbolTable(program);
-      if (trace) IO.println("END   BUILDING SYMBOL TABLE");
-      if (trace) IO.println("BEGIN MACHINE CODE GENERATION");
-      short[] code = buildCode(program, symbolTable);
-      if (trace) IO.println("END   MACHINE CODE GENERATION");
+      if (trace) IODrivers.println("BEGIN STRIP COMMENTS");
+      String programWithoutComments = stripComments(program, trace);
+      if (trace) IODrivers.println("END   STRIP COMMENTS");
+      if (trace) IODrivers.println(programWithoutComments);
+      if (trace) IODrivers.println("BEGIN BUILDING SYMBOL TABLE");
+      SymbolTable symbolTable = buildSymbolTable(programWithoutComments, trace);
+      if (trace) IODrivers.println("END   BUILDING SYMBOL TABLE");
+      if (trace) IODrivers.println("BEGIN MACHINE CODE GENERATION");
+      short[] code = buildCode(programWithoutComments, symbolTable, trace);
+      if (trace) IODrivers.println("END   MACHINE CODE GENERATION");
       if (trace) printMachineCode(code);
       return code;
     } catch (Exception e) {
@@ -46,8 +50,44 @@ public class Compiler {
     }
   }
 
+    /**
+     * Remove os comentarios de um programa
+     */
+  public static String stripComments(String program, boolean trace) {
+    StringTokenizer parser = new StringTokenizer(program, "\n\r;",true);
+
+    StringBuffer strippedProgram = new StringBuffer();
+    while (parser.hasMoreTokens()) {
+      // reads a label or instruction mnemonic
+      String token = parser.nextToken();
+      // check if it is a valid instruction name
+      if (token.equals(";")) {// encontrou um comentario
+          if (! parser.hasMoreTokens()) {
+              break;
+          }
+          token = parser.nextToken();
+          while (!(token.equals("\n") || token.equals("\r"))) {
+              if (! parser.hasMoreTokens()) {
+                  break;
+              }
+              token = parser.nextToken();          
+          }
+          if (token.equals("\n") || token.equals("\r")) {
+               if (! parser.hasMoreTokens()) {
+                  break;
+              }
+             token = parser.nextToken();          
+          }
+      } else {
+        strippedProgram.append(token);
+      }
+    }
+    return strippedProgram.toString();
+  }
+
+
   // first pass into the code to build the symbol table
-  public static SymbolTable buildSymbolTable(String program) {
+  public static SymbolTable buildSymbolTable(String program, boolean trace) {
     // counts the amount of instructions of the code
     short codeSize = 0;
     // counts the amount of declared vars into the code
@@ -82,7 +122,7 @@ public class Compiler {
               // label name
               if (InstructionSet.addressesVar(labelOrOpCode)) {
                   // declares the variable and insert it into symbol table
-                symbolTable.insertVar(instructionArg, varCount);
+                symbolTable.insertVar(instructionArg, varCount,trace);
                 varCount++;
               }
             }
@@ -93,16 +133,16 @@ public class Compiler {
       } else {
         // is a label - insert label into symbol table, displaced from
         // the begining of the program by "codeSize" value
-        symbolTable.insertLabel(labelOrOpCode, codeSize);
+        symbolTable.insertLabel(labelOrOpCode, codeSize, trace);
       }
     }
     // insert a last entry into symbol table with the value of code size
-    symbolTable.insertLabel("$CODESIZE", codeSize);
+    symbolTable.insertLabel("$CODESIZE", codeSize, trace);
     return symbolTable;
   }
 
   // second pass into code, to generate final code
-  public static short[] buildCode(String program, SymbolTable symbolTable)
+  public static short[] buildCode(String program, SymbolTable symbolTable, boolean trace)
                                                           throws Exception {
     Vector code = new Vector();
     // read code size calculated by buildTable
@@ -146,13 +186,13 @@ public class Compiler {
   }
 
   private static void error(String errorMessage) throws Exception {
-    IO.println(errorMessage);
+    IODrivers.println(errorMessage);
     throw new Exception(errorMessage);
   }
   
   public static void printMachineCode(short[] machineCode) {
     for (int i = 0; i < machineCode.length; i++) {
-      IO.println("i["+i+"]=["+Formatter.dumpCell(machineCode[i])+"]");  
+      IODrivers.println("i["+i+"]=["+WordFormatter.dumpCell(machineCode[i])+"]");  
     }
   }
 }

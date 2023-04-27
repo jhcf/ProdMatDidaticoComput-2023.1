@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=WordFormatter
+comment0.text=\n\ WordFormatter.java\ -\ versao\ 2\n\ O\ tamanho\ da\ palavra\ do\ computador\ visivel\ e\ 16\ bits.\n\ Uma\ palavra\ e\ uma\ cadeia\ de\ 16\ bits\ que\ e\ usada\ em\ varias\ partes\ do\ computador\ visivel,\ como\ em\ sua\ memoria,\ registradores\ ou\ dispositivos.\n\ PAlavras\ sao\ armazenadas\ no\ computador\ visivel\ usando\ shorts\ em\ Java,\ isso\ eh\ inteiros\ de\ 16\ bits.\n\ WordFormatter\ e\ a\ classe\ que\ auxilia\ na\ apresenta\u00E7ao\ da\ estrutura\ desses\ bits,\ decompondo\ as\ palavras\ em\ peda\u00E7os\ e\ as\ vezes\ apresentando-a\ na\ forma\ de\ strings.\n\n\ Copyright\ (c)\ 2023,\ Jorge\ H.\ C.\ Fernandes\ (jhcf@unb.br)\n\ Uso\ irrestrito\ para\ fins\ educacionais\ e\ n\u00E3o\ lucrativos.\n\ Free\ use\ only\ for\ educational\ and\ nonprofit\ purposes\n
+comment1.params=
+comment1.target=WordFormatter()
+comment2.params=value
+comment2.target=int\ getHigherOrderByte(short)
+comment3.params=value
+comment3.target=int\ getLowerOrderByte(short)
+comment4.params=value
+comment4.target=boolean\ isFalse(short)
+comment5.params=value
+comment5.target=java.lang.String\ dumpBinState(short)
+comment6.params=value
+comment6.target=java.lang.String\ dumpHexState(short)
+comment7.params=hexByte
+comment7.target=java.lang.String\ toHex(byte)
+comment8.params=value
+comment8.target=java.lang.String\ dumpCell(short)
+numComments=9

@@ -1,3 +1,5 @@
+; Este programa usa um conjunto de instruções de pilha (PUSH, POP, RET) 
+; Não funciona em todas as arquiteturas do computador visível
 quadrado:
 	READ a;
 	PUSH a;

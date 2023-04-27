@@ -30,12 +30,11 @@ class Memory {
     values[(char)position] = _value;
   }
   String dump() {
-    int cellsPerLine = 8;
+    int cellsPerLine = 2;
     int qtdLines = values.length / cellsPerLine;
     int cellCount = 0;
     StringBuffer buf = new StringBuffer();
     for (int i = 0; i < qtdLines; i++) {
-      //buff.append("");
       for (int j = 0; j < cellsPerLine; j++) {
          int index = i*cellsPerLine+j;
          dumpCell(buf, index);
@@ -47,15 +46,16 @@ class Memory {
       dumpCell(buf, cellCount);      
       cellCount++;
     }
-    buf.append("\n");
     return buf.toString();
   }
   void dumpCell(StringBuffer buf, int index) {
      buf.append("M["+index+"]=");
-     String s = Formatter.dumpCell(values[index]);
+     String s = WordFormatter.dumpCell(values[index]);
      buf.append(s+"  ");
   }
   void print() {
-    IO.println(dump());
+    IODrivers.println("MEMORY DEVICE BEGIN DUMP: 16 bits words: qty words:["+getSize()+"]");
+    IODrivers.println(dump());
+    IODrivers.println("MEMORY DEVICE END DUMP");
   }
 }

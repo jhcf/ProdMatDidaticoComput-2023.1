@@ -67,33 +67,33 @@ public class InstructionSet {
     if (qtyInstructions < 0) qtyInstructions = getQtyInstructions(defaultLanguage);
     instructionSet = new InstructionDescription[qtyInstructions];
     // cadastra cada uma das instruções que poderão ser interpretadas pelo vc0
-    if (NOP < instructionSet.length) instructionSet[NOP]  = new InstructionDescription(NOP,  	"NOP", 	"'No Operation'"  ,		false, false);
-    if (STOP < instructionSet.length) instructionSet[STOP] = new InstructionDescription(STOP, 	"STOP",	"'Halts program execution'", 	false,false);
-    if (READ < instructionSet.length) instructionSet[READ] = new InstructionDescription(READ, 	"READ",	"MEM[operand] <- INPUT_DEVICE", true ,true);
-    if (WRITE < instructionSet.length) instructionSet[WRITE]= new InstructionDescription(WRITE,	"WRITE","OUTPUT_DEVICE <- MEM[operand]",true ,true);
-    if (LOAD < instructionSet.length) instructionSet[LOAD] = new InstructionDescription(LOAD, 	"LOAD",	"ACC <- MEM[operand]", 		true ,true);
-    if (STORE < instructionSet.length) instructionSet[STORE]= new InstructionDescription(STORE,	"STORE","MEM[operando] <- ACC", 	true ,true);
-    if (ADD < instructionSet.length) instructionSet[ADD]  = new InstructionDescription(ADD,  	"ADD",	"ACC <- ACC + MEM[operand]", 	true ,true);
-    if (SUB < instructionSet.length) instructionSet[SUB]  = new InstructionDescription(SUB,  	"SUB", 	"ACC <- ACC - MEM[operand]", 	true ,true);
-    if (ACC < instructionSet.length) instructionSet[ACC]  = new InstructionDescription(ACC,  	"ACC", 	"ACC <- operand",		true ,false);
-    if (JUMP < instructionSet.length) instructionSet[JUMP] = new InstructionDescription(JUMP,	"JUMP",	"IP <- operand",		true ,false);
-    if (JNZ < instructionSet.length) instructionSet[JNZ]  = new InstructionDescription(JNZ,  	"JNZ", 	"'IF' ACC != 0 'THEN' IP <- operand",true ,false);
-    if (MULT < instructionSet.length) instructionSet[MULT]  = new InstructionDescription(MULT,	"MULT",	"ACC <- ACC * MEM[operando]", 	true, true); 
-    if (DIV < instructionSet.length) instructionSet[DIV]  = new InstructionDescription(DIV,  	"DIV",	"ACC <- ACC / MEM[operando]", 	true, true); 
-    if (REM < instructionSet.length) instructionSet[REM]  = new InstructionDescription(REM,  	"REM",	"ACC <- ACC % MEM[operando]", 	true, true); 
-    if (INV < instructionSet.length) instructionSet[INV]  = new InstructionDescription(INV,  	"INV",	"ACC <- - ACC", 		false, false); 
-    if (JGZ < instructionSet.length) instructionSet[JGZ]  = new InstructionDescription(JGZ,  	"JGZ",	"'IF' ACC > 0 'THEN' IP <- operand", true, false); 
-    if (PUSH < instructionSet.length) instructionSet[PUSH] = new InstructionDescription(PUSH, 	"PUSH",	"SP <- SP - 1, MEM[SP] <- MEM[operand]; ", true ,true);
-    if (POP < instructionSet.length) instructionSet[POP]  = new InstructionDescription(POP,  	"POP",	"MEM[SP] <- IP; SP <- SP + 1", 	true ,true);
-    if (CALL < instructionSet.length) instructionSet[CALL] = new InstructionDescription(CALL, 	"CALL",	"", 				true ,true);
-    if (RET < instructionSet.length) instructionSet[RET]  = new InstructionDescription(RET,  	"RET",	"", 				false,false); 
+    if (NOP < instructionSet.length) instructionSet[NOP]  = new InstructionDescription(NOP,      "NOP",     "'No Operation'"  ,        false, false);
+    if (STOP < instructionSet.length) instructionSet[STOP] = new InstructionDescription(STOP,     "STOP",    "'Halts program execution'",     false,false);
+    if (READ < instructionSet.length) instructionSet[READ] = new InstructionDescription(READ,     "READ",    "MEM[operand] <- INPUT_DEVICE", true ,true);
+    if (WRITE < instructionSet.length) instructionSet[WRITE]= new InstructionDescription(WRITE,    "WRITE","OUTPUT_DEVICE <- MEM[operand]",true ,true);
+    if (LOAD < instructionSet.length) instructionSet[LOAD] = new InstructionDescription(LOAD,     "LOAD",    "ACC <- MEM[operand]",         true ,true);
+    if (STORE < instructionSet.length) instructionSet[STORE]= new InstructionDescription(STORE,    "STORE","MEM[operando] <- ACC",     true ,true);
+    if (ADD < instructionSet.length) instructionSet[ADD]  = new InstructionDescription(ADD,      "ADD",    "ACC <- ACC + MEM[operand]",     true ,true);
+    if (SUB < instructionSet.length) instructionSet[SUB]  = new InstructionDescription(SUB,      "SUB",     "ACC <- ACC - MEM[operand]",     true ,true);
+    if (ACC < instructionSet.length) instructionSet[ACC]  = new InstructionDescription(ACC,      "ACC",     "ACC <- operand",        true ,false);
+    if (JUMP < instructionSet.length) instructionSet[JUMP] = new InstructionDescription(JUMP,    "JUMP",    "IP <- operand",        true ,false);
+    if (JNZ < instructionSet.length) instructionSet[JNZ]  = new InstructionDescription(JNZ,      "JNZ",     "'IF' ACC != 0 'THEN' IP <- operand",true ,false);
+    if (MULT < instructionSet.length) instructionSet[MULT]  = new InstructionDescription(MULT,    "MULT",    "ACC <- ACC * MEM[operando]",     true, true); 
+    if (DIV < instructionSet.length) instructionSet[DIV]  = new InstructionDescription(DIV,      "DIV",    "ACC <- ACC / MEM[operando]",     true, true); 
+    if (REM < instructionSet.length) instructionSet[REM]  = new InstructionDescription(REM,      "REM",    "ACC <- ACC % MEM[operando]",     true, true); 
+    if (INV < instructionSet.length) instructionSet[INV]  = new InstructionDescription(INV,      "INV",    "ACC <- - ACC",         false, false); 
+    if (JGZ < instructionSet.length) instructionSet[JGZ]  = new InstructionDescription(JGZ,      "JGZ",    "'IF' ACC > 0 'THEN' IP <- operand", true, false); 
+    if (PUSH < instructionSet.length) instructionSet[PUSH] = new InstructionDescription(PUSH,     "PUSH",    "SP <- SP - 1, MEM[SP] <- MEM[operand]; ", true ,true);
+    if (POP < instructionSet.length) instructionSet[POP]  = new InstructionDescription(POP,      "POP",    "MEM[SP] <- IP; SP <- SP + 1",     true ,true);
+    if (CALL < instructionSet.length) instructionSet[CALL] = new InstructionDescription(CALL,     "CALL",    "",                 true ,true);
+    if (RET < instructionSet.length) instructionSet[RET]  = new InstructionDescription(RET,      "RET",    "",                 false,false); 
 
     // verifica a consistência do conjunto de instruções definidas
     for (int i = 0; i < instructionSet.length; i++) {
       InstructionDescription iDef = instructionSet[i];
       //verifica se o índice do opcode está consistente com a definição da instrução
       if ((iDef == null)||(iDef.opcode != i)){
-        IO.println("Index mismatch in instruction whose opcode is ["+i+"]. "+
+        IODrivers.println("Index mismatch in instruction whose opcode is ["+i+"]. "+
                            "Fatal error! ");
         System.exit(0);
       } 
@@ -101,7 +101,7 @@ public class InstructionSet {
       for (int j = i + 1; j < instructionSet.length; j++) {
           InstructionDescription iDef2 = instructionSet[j];
           if (iDef2.mnemonics.matches(iDef.mnemonics)) {
-            IO.println("Duplicate mnemonic in instructions of opcodes ["+i+"] and ["+j+"]. "+
+            IODrivers.println("Duplicate mnemonic in instructions of opcodes ["+i+"] and ["+j+"]. "+
                            "Fatal error! ");
             System.exit(0);
           }
@@ -140,7 +140,7 @@ public class InstructionSet {
   }
 
   public static void print() {
-      IO.print(dump());
+      IODrivers.print(dump());
   }
   
   // imprime uma descrição do conjunto de instruções interpretadas pela máquina

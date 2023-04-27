@@ -20,15 +20,17 @@ class ControlUnit {
   // the control unit needs access to the outputDevice to write data for the user
   OutputDevice outputDevice;
 
-  ControlUnit(CPU cpu, Memory memory, InputDevice inputDevice, OutputDevice outputDevice) {
-    this.memory = memory;
-    this.inputDevice = inputDevice;
-    this.outputDevice = outputDevice;
-    this.cpu = cpu;
+  ControlUnit() {
   }
 
   public void setCPU(CPU cpu) {
-      this.cpu = cpu;
+        this.cpu = cpu;
+  }
+
+  public void setBus(Memory mem, InputDevice in, OutputDevice out) {
+        this.memory = mem;
+        this.inputDevice = in;
+        this.outputDevice = out;
   }
 
   /* executa o ciclo de execução das instruçoes (do programa) */
@@ -39,7 +41,7 @@ class ControlUnit {
       fetchNextInstruction();       // lê da memória a instruçao a ser decodificada
       incrementInstructionPointer();// incrementa o ponteiro de instruçoes
       stop = decodeInstruction(); // decodificar a instruçao
-      if (trace) IO.println(cpu.dumpRegisters());
+      if (trace) IODrivers.println(cpu.dumpRegisters());
     }
   }
 
@@ -63,7 +65,8 @@ class ControlUnit {
     short value, valueAux, result, newSPValue;
 
     switch(opCode) {
-
+     case InstructionSet.NOP:
+                  return false;
       case InstructionSet.LOAD:
                   value = memory.read(opArgument);
                   cpu.accumulator.write(value);
@@ -107,7 +110,6 @@ class ControlUnit {
                     cpu.instructionPointer.write(opArgument);
                   }
                   return false;
-/*
       case InstructionSet.MULT:
                   value = cpu.accumulator.read();
                   valueAux = memory.read(opArgument);
@@ -138,9 +140,8 @@ class ControlUnit {
                     cpu.instructionPointer.write(opArgument);
                   }
                   return false;
-**/
-/**
-      case InstructionSet.PUSH:
+/*
+       case InstructionSet.PUSH:
                   // le dado da memoria
                   valueAux = memory.read(opArgument);
                   // le valor corrente do stack pointer
@@ -187,10 +188,12 @@ class ControlUnit {
                   cpu.instructionPointer.write(valueAux);
                   return false;
 
-      case InstructionSet.NOP:
-                  return false;
-*/
+ */
      }
      return true;
    }
+  void print() {
+    IODrivers.println("Conjunto de instruçoes da unidade de controle");
+    InstructionSet.print();
+  }
 }

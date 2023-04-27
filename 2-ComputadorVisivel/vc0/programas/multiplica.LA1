@@ -1,3 +1,5 @@
+; implementa a multiplicação por meio de adições sucessivas
+
 READ a1 
 READ a2
 

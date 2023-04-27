@@ -33,16 +33,23 @@ public class SymbolTable {
   /* 
    * insere um símbolo do tipo variável 
    */
-  public void insertVar(String varName, short varIndex) {
+  public void insertVar(String varName, short varIndex, boolean trace) {
     VarEntry var = new VarEntry(varName, varIndex);
     dictionary.put(varName, var);
+    if (trace) {
+      IODrivers.println("buildSymbolTable:Nova Variavel:["+varName+"] indice:["+varIndex+"]");
+    }
   }
   /* 
    * insere um símbolo do tipo rótulo
    */
-  public void insertLabel(String labelName, short labelAddr) {
+  public void insertLabel(String labelName, short labelAddr, boolean trace) {
     LabelEntry label = new LabelEntry(labelName, labelAddr);
     dictionary.put(labelName, label);
+    if (trace) {
+      IODrivers.println("buildSymbolTable:Novo Rotulo:["+labelName+"] endereço:["+labelAddr+"]");
+    }
+ 
   }
   /*
    * recupera as informaçoes sobre um símbolo com um nome especifico
@@ -72,6 +79,6 @@ public class SymbolTable {
       SymbolTableEntry entry = (SymbolTableEntry) getSymbolEntry(symbolName);
       buf.append(entry.dump());
     }
-    IO.print(buf.toString());
+    IODrivers.print(buf.toString());
   }
 }

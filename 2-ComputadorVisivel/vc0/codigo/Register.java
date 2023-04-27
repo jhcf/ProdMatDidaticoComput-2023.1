@@ -19,6 +19,9 @@ class Register {
     return value;
   }
   String dump() {
-    return Formatter.dumpCell(value);
+    return WordFormatter.dumpCell(value);
+  }
+  void print() {
+    IODrivers.println(dump());
   }
 }

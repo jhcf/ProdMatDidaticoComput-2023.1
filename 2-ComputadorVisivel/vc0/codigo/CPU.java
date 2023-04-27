@@ -24,7 +24,7 @@ public class CPU {
   // computes transformation over data
   ArithmeticLogicUnit alu;
   
-  CPU(Memory memory, InputDevice inputDevice, OutputDevice outputDevice, ControlUnit controlUnit, 
+  CPU(ControlUnit controlUnit, 
   InstructionRegister instructionRegister, Register accumulator , Register  instructionPointer, ArithmeticLogicUnit alu) {
     this.controlUnit = controlUnit;
     controlUnit.setCPU(this);
@@ -35,13 +35,12 @@ public class CPU {
     this.alu = alu;
   }
 
-  CPU(Memory memory, InputDevice inputDevice, OutputDevice outputDevice) {
-    controlUnit = new ControlUnit(this, memory, inputDevice, outputDevice);
-    instructionRegister = new InstructionRegister();
-    accumulator = new Register();
-    instructionPointer = new Register();
-//    stackPointer = new Register();
-    alu = new ArithmeticLogicUnit();
+  CPU() {
+    this(new ControlUnit(), new InstructionRegister(), new Register(), new Register(), new ArithmeticLogicUnit());
+  }
+
+  public void setBus(Memory memory, InputDevice in, OutputDevice out) {
+      this.controlUnit.setBus(memory,  in,  out);
   }
 
   public String dump() {
@@ -61,5 +60,18 @@ public class CPU {
 
   void execute(boolean trace) {
     controlUnit.execute(trace);
+  }
+  
+  public void print() {
+    IODrivers.println("CPU BEGIN DUMP");
+    IODrivers.println("ACC");
+    accumulator.print();
+    IODrivers.println("IP");
+    instructionPointer.print();
+    IODrivers.println("IR");
+    instructionRegister.print();
+    alu.print();
+    controlUnit.print();
+    IODrivers.println("CPU END DUMP");
   }
 }

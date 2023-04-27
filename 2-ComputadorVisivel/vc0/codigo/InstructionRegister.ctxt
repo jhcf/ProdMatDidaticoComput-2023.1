@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=short\ getOpArgument()
 comment3.params=
 comment3.target=java.lang.String\ dumpState()
-numComments=4
+comment4.params=
+comment4.target=void\ print()
+numComments=5

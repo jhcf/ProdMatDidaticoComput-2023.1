@@ -11,17 +11,19 @@
  * Free use only for educational and nonprofit purposes
  */
 class ArithmeticLogicUnit {
+  void print() {
+    IODrivers.println("ALU: Operaçoes aritmeticas suportadas: add, sub, div, rem, mult, inv");
+    IODrivers.println("ALU: Operaçoes logicas suportadas: equals, diff, greather, less");
+  }
+    
   short add(short  v1, short v2) {
     return (short) (v1 + v2);
   }
   short sub(short v1, short v2) {
     return (short) (v1 - v2);
   }
-  short equals(short v1, short v2) {
-    if(v1 == v2) 
-    	return (short) 1;
-    else 
-    	return (short)0;
+  short inv(short v1) {
+    return (short) - v1;
   }
   short div(short v1, short v2) {
     return (short) (v1 / v2);
@@ -32,13 +34,28 @@ class ArithmeticLogicUnit {
   short mult(short v1, short v2) {
     return (short) (v1 * v2);
   }
+  short equals(short v1, short v2) {
+    if(v1 == v2) 
+        return (short) 1;
+    else 
+        return (short)0;
+  }
+  short diff(short v1, short v2) {
+    if (v1 != v2) 
+        return (short) 1;
+    else 
+        return (short)0;
+  }
   short greather(short v1, short v2) {
     if(v1 > v2) 
-    	return (short) 1;
+        return (short) 1;
     else 
-    	return (short)0;
+        return (short)0;
   }
-  short inv(short v1) {
-    return (short) - v1;
+  short less(short v1, short v2) {
+    if(v1 < v2) 
+        return (short) 1;
+    else 
+        return (short)0;
   }
 }

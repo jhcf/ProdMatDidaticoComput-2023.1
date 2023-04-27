@@ -1,8 +1,9 @@
+; Este programa usa um conjunto de instruções de pilha (PUSH, POP, RET) para implementar a rotina menor que
+; sem o uso de uma unidade aritmética e lógica 
+; Não funciona em todas as arquiteturas do computador visível
 Programa_testa_menor:
-        ACC 0
-        STORE p1
-        ACC 0
-        STORE p2
+        READ p1
+        READ p2
         PUSH p1
         PUSH p2
         CALL SubRotinaMenorQue
@@ -23,7 +24,7 @@ testa_n2:
 	LOAD n2
 	JNZ subtrai_todos
 	JUMP n1_maior
-subtrai_todos
+subtrai_todos:
 	LOAD n1
 	SUB um
 	STORE n1
