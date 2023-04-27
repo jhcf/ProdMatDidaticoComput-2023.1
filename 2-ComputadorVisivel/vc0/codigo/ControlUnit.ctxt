@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ControlUnit
+comment0.text=\n\ ControlUnit.java\ \n\ Copyright\ (c)\ 2001,\ Jorge\ H.\ C.\ Fernandes\ (jorge@dimap.ufrn.br)\n\ Todos\ os\ direitos\ reservados.\ A\ rights\ reserved.\n\ Uso\ irrestrito\ para\ fins\ educacionais\ e\ n\u00E3o\ lucrativos.\n\ Free\ use\ only\ for\ educational\ and\ nonprofit\ purposes\n\ \ \n\ Controls\ the\ execution\ of\ the\ program's\ instructions\n\ \n
+comment1.params=cpu\ memory\ inputDevice\ outputDevice
+comment1.target=ControlUnit(CPU,\ Memory,\ InputDevice,\ OutputDevice)
+comment2.params=cpu
+comment2.target=void\ setCPU(CPU)
+comment3.params=trace
+comment3.target=void\ execute(boolean)
+comment3.text=executa\ o\ ciclo\ de\ execu\u00E7\u00E3o\ das\ instru\u00E7oes\ (do\ programa)
+comment4.params=
+comment4.target=void\ fetchNextInstruction()
+comment5.params=
+comment5.target=void\ incrementInstructionPointer()
+comment6.params=
+comment6.target=boolean\ decodeInstruction()
+numComments=7

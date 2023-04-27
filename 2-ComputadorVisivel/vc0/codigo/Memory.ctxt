@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Memory
+comment0.text=\n\ Memory.java\ -\ versao\ 2\n\ Models\ the\ vc0's\ RAM\ memory\n\n\ This\ code\ is\ part\ of\ the\ Computador\ Visivel\ -\ vc0\n\ Copyright\ (c)\ 2002,\ Jorge\ H.\ C.\ Fernandes\ (jorge@dimap.ufrn.br)\n\ Todos\ os\ direitos\ reservados.\ All\ rights\ reserved.\n\ Uso\ irrestrito\ para\ fins\ educacionais\ e\ n\u00E3o\ lucrativos.\n\ Free\ use\ only\ for\ educational\ and\ nonprofit\ purposes\n
+comment1.params=size
+comment1.target=Memory(short)
+comment2.params=
+comment2.target=short\ getSize()
+comment3.params=position
+comment3.target=short\ read(short)
+comment4.params=position\ _value
+comment4.target=void\ write(short,\ short)
+comment5.params=
+comment5.target=java.lang.String\ dump()
+comment6.params=buf\ index
+comment6.target=void\ dumpCell(java.lang.StringBuffer,\ int)
+comment7.params=
+comment7.target=void\ print()
+numComments=8

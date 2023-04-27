@@ -16,6 +16,17 @@ import java.util.StringTokenizer;
 
 public class Compiler {
 
+
+  public static short[] compileFile(String fileName) {
+      String program = Loader.readFile(fileName,true);
+      try {
+        short[] machineCode = Compiler.compile(program, true);
+        return machineCode;
+      } catch (Exception e) {
+        System.out.println(e);
+      }
+      return null;
+    }
   // compiles a VisibleComputer0 program given its contents in string format
   // returns the array of instructions as result
   public static short[] compile(String program, boolean trace) throws Exception {
@@ -70,7 +81,7 @@ public class Compiler {
               // checks if the symbol is a variable name or a
               // label name
               if (InstructionSet.addressesVar(labelOrOpCode)) {
-              	// declares the variable and insert it into symbol table
+                  // declares the variable and insert it into symbol table
                 symbolTable.insertVar(instructionArg, varCount);
                 varCount++;
               }

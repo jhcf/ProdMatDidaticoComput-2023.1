@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=OutputDevice
+comment0.text=\n\ OutputDevice.java\ -\ versao\ 1.1\n\ Models\ an\ output\ device.\n\n\ This\ code\ is\ part\ of\ the\ Computador\ Visivel\ -\ vc0\n\ Copyright\ (c)\ 2002,\ Jorge\ H.\ C.\ Fernandes\ (jorge@dimap.ufrn.br)\n\ Todos\ os\ direitos\ reservados.\ All\ rights\ reserved.\n\ Uso\ irrestrito\ para\ fins\ educacionais\ e\ n\u00E3o\ lucrativos.\n\ Free\ use\ only\ for\ educational\ and\ nonprofit\ purposes\n
+comment1.params=value
+comment1.target=void\ write(short)
+numComments=2

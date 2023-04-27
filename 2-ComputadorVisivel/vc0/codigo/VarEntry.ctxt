@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=VarEntry
+comment1.params=name\ value
+comment1.target=VarEntry(java.lang.String,\ short)
+comment2.params=base
+comment2.target=short\ getOffset(short)
+comment3.params=
+comment3.target=java.lang.String\ getType()
+numComments=4

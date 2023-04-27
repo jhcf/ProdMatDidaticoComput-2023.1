@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=InstructionRegister
+comment0.text=\n\ InstructionRegister.java\ -\ versao\ 1.1\n\ Models\ a\ special\ kind\ of\ register,\ able\ to\ analize\ the\ instructions\ it\ held\n\n\ This\ code\ is\ part\ of\ the\ Computador\ Visivel\ -\ vc0\n\ Copyright\ (c)\ 2002,\ Jorge\ H.\ C.\ Fernandes\ (jorge@dimap.ufrn.br)\n\ Todos\ os\ direitos\ reservados.\ All\ rights\ reserved.\n\ Uso\ irrestrito\ para\ fins\ educacionais\ e\ n\u00E3o\ lucrativos.\n\ Free\ use\ only\ for\ educational\ and\ nonprofit\ purposes\n
+comment1.params=
+comment1.target=short\ getOpcode()
+comment2.params=
+comment2.target=short\ getOpArgument()
+comment3.params=
+comment3.target=java.lang.String\ dumpState()
+numComments=4

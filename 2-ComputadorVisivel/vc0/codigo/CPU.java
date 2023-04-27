@@ -24,6 +24,17 @@ public class CPU {
   // computes transformation over data
   ArithmeticLogicUnit alu;
   
+  CPU(Memory memory, InputDevice inputDevice, OutputDevice outputDevice, ControlUnit controlUnit, 
+  InstructionRegister instructionRegister, Register accumulator , Register  instructionPointer, ArithmeticLogicUnit alu) {
+    this.controlUnit = controlUnit;
+    controlUnit.setCPU(this);
+    this.instructionRegister = instructionRegister ;
+    this.accumulator = accumulator;
+    this.instructionPointer = instructionPointer;
+    //this.stackPointer = new Register();
+    this.alu = alu;
+  }
+
   CPU(Memory memory, InputDevice inputDevice, OutputDevice outputDevice) {
     controlUnit = new ControlUnit(this, memory, inputDevice, outputDevice);
     instructionRegister = new InstructionRegister();

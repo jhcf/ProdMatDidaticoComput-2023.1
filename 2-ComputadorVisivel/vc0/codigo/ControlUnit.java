@@ -27,6 +27,10 @@ class ControlUnit {
     this.cpu = cpu;
   }
 
+  public void setCPU(CPU cpu) {
+      this.cpu = cpu;
+  }
+
   /* executa o ciclo de execução das instruçoes (do programa) */
   void execute(boolean trace) {
     cpu.instructionPointer.write((short)0); // armazena 0 no IP

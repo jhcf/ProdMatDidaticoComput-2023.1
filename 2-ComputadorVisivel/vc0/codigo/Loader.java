@@ -46,9 +46,9 @@ class Loader {
   }
   
   public static void diagnose(vc0 computer) {
-  	// collects some information about the error that occurred during execution
-  	IO.println("EXECUTION FAILURE - DUMPING COMPUTER STATE");
-  	IO.println(computer.dump());
+      // collects some information about the error that occurred during execution
+      IO.println("EXECUTION FAILURE - DUMPING COMPUTER STATE");
+      IO.println(computer.dump());
   }
 
   static int MAX_FILE_SIZE = 64000;
@@ -68,6 +68,7 @@ class Loader {
       if (trace) IO.println("END   READING PROGRAM FROM FILE SYSTEM");
       // cria uma string com todo o código lido do disco
       String program = new String(vcmlCode, 0, bytesRead);
+      if (trace) IO.println(program);
       return program;
     } catch (IOException ioe) {
       error("Program file ["+fileName+"] not found.");
@@ -92,18 +93,18 @@ class Loader {
 
   private static void showUsageMessage() {
     String mensagem = 
-      "Usage Mode:															\n"+
+      "Usage Mode:                                                            \n"+
       " java Loader -e <file-name>   Load and execute program stored in <file-name>\n"+
       " java Loader -ed <file-name>  Load and trace execution\n"+
       " java Loader -h <help-option> Print help information\n"+
-      "    <help-option> = a    Print VC0's architecture	\n"+
-      "    <help-option> = i    Print instruction set		\n"+
-      "    <help-option> = p    Print sample program 1		\n"+
-      "Example							:\n"+
-      "  java Loader -e echo.a0					\n"+
-      "  java Loader -ed multiply.txt				\n"+
-      "  java Loader -h a					\n"+
-      "  java Loader -h i					\n";
+      "    <help-option> = a    Print VC0's architecture    \n"+
+      "    <help-option> = i    Print instruction set        \n"+
+      "    <help-option> = p    Print sample program 1        \n"+
+      "Example                            :\n"+
+      "  java Loader -e echo.a0                    \n"+
+      "  java Loader -ed multiply.txt                \n"+
+      "  java Loader -h a                    \n"+
+      "  java Loader -h i                    \n";
     IO.println(mensagem);
   }
 

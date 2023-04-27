@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Formatter
+comment0.text=\n\ Value.java\ -\ versao\ 2\n\ A\ value\ is\ a\ 16\ bits\ value\ to\ be\ held\ into\ some\ place\n\ of\ the\ visibleComputer\ (memory,\ registers\ or\ devices)\n\ The\ "word"\ size\ of\ the\ computer\ is\ 16\n\n\ This\ code\ is\ part\ of\ the\ Computador\ Visivel\ -\ vc0\n\ Copyright\ (c)\ 2003,\ Jorge\ H.\ C.\ Fernandes\ (jorge@dimap.ufrn.br)\n\ Todos\ os\ direitos\ reservados.\ All\ rights\ reserved.\n\ Uso\ irrestrito\ para\ fins\ educacionais\ e\ n\u00E3o\ lucrativos.\n\ Free\ use\ only\ for\ educational\ and\ nonprofit\ purposes\n
+comment1.params=
+comment1.target=Formatter()
+comment2.params=value
+comment2.target=int\ getHigherOrderByte(short)
+comment3.params=value
+comment3.target=int\ getLowerOrderByte(short)
+comment4.params=value
+comment4.target=boolean\ isFalse(short)
+comment5.params=value
+comment5.target=java.lang.String\ dumpBinState(short)
+comment6.params=value
+comment6.target=java.lang.String\ dumpHexState(short)
+comment7.params=hexByte
+comment7.target=java.lang.String\ toHex(byte)
+comment8.params=value
+comment8.target=java.lang.String\ dumpCell(short)
+numComments=9

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Compiler
+comment1.params=fileName
+comment1.target=short[]\ compileFile(java.lang.String)
+comment2.params=program\ trace
+comment2.target=short[]\ compile(java.lang.String,\ boolean)
+comment3.params=program
+comment3.target=SymbolTable\ buildSymbolTable(java.lang.String)
+comment4.params=program\ symbolTable
+comment4.target=short[]\ buildCode(java.lang.String,\ SymbolTable)
+comment5.params=errorMessage
+comment5.target=void\ error(java.lang.String)
+comment6.params=machineCode
+comment6.target=void\ printMachineCode(short[])
+numComments=7
