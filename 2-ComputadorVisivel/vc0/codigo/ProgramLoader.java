@@ -34,7 +34,7 @@ class ProgramLoader {
        IODrivers.println("CODIGO DE MAQUINA VAZIO");
        return;
     }
-    vc0 computer = new vc0(memorySize);
+    Computer computer = new Computer(memorySize);
     if (trace) IODrivers.println("BEGIN LOADING PROGRAM IN MEMORY");
     // carrega o programa em memória
     computer.loadProgram(0, machineCode, trace);
@@ -55,7 +55,7 @@ class ProgramLoader {
     /**
      * Apresenta o estado do computador, para fins de diagnostico
      */  
-  public static void diagnose(vc0 computer) {
+  public static void diagnose(Computer computer) {
       // collects some information about the error that occurred during execution
       IODrivers.println("EXECUTION FAILURE - DUMPING COMPUTER STATE");
       IODrivers.println(computer.dump());
@@ -103,7 +103,7 @@ class ProgramLoader {
   }
 
   private static void showArchitectureHelp() {
-    IODrivers.println(vc0.getArchitectureHelp());
+    IODrivers.println(Computer.getArchitectureHelp());
   }
 
   private static void showHeadBanner() {

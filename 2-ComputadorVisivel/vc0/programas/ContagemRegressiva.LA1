@@ -2,7 +2,7 @@
 inicio:
 	ACC 1 			; armazena 1 no acumulador
 	STORE um                ; declara uma variável "um" e armazena neça o valor do acumulador
-	ACC 12			; armazena 12 no acumulador
+	ACC 10			; armazena 12 no acumulador
 	STORE contador		; declara uma variável "contador" e armazena neça o valor do acumulador
 teste:
 	LOAD contador

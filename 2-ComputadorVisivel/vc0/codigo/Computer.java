@@ -9,7 +9,7 @@
  * Free use only for educational and nonprofit purposes
 */
 
-public class vc0 {
+public class Computer {
 
   // all units of the computer are declared below
   
@@ -26,7 +26,7 @@ public class vc0 {
   // This is the central unit of the Visible Computer
   CPU cpu;
 
-  vc0(short memorySize) {
+  Computer(short memorySize) {
     inputDevice = new InputDevice();
     outputDevice = new OutputDevice();
     memory = new Memory(memorySize);
@@ -34,7 +34,7 @@ public class vc0 {
     cpu.setBus(memory, inputDevice, outputDevice);
   }
 
-  vc0 (InputDevice in, OutputDevice out, Memory mem, CPU cpu1) {
+  Computer (InputDevice in, OutputDevice out, Memory mem, CPU cpu1) {
     this.inputDevice = in;
     this.outputDevice = out;
     this.memory = mem;

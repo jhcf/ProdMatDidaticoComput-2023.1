@@ -1,10 +1,10 @@
 #BlueJ class context
-comment0.target=vc0
+comment0.target=Computer
 comment0.text=\n\ VisibleComputer0.java\ -\ versao\ 1.1\n\ The\ VisibleComputer0\ is\ a\ software\ model\ of\ a\ very\ simple\ yet\ complete\ digital\ computer\n\n\ This\ code\ is\ part\ of\ the\ Computador\ Visivel\ -\ vc0\n\ Copyright\ (c)\ 2002,\ Jorge\ H.\ C.\ Fernandes\ (jorge@dimap.ufrn.br)\n\ Todos\ os\ direitos\ reservados.\ All\ rights\ reserved.\n\ Uso\ irrestrito\ para\ fins\ educacionais\ e\ n\u00E3o\ lucrativos.\n\ Free\ use\ only\ for\ educational\ and\ nonprofit\ purposes\n
 comment1.params=memorySize
-comment1.target=vc0(short)
+comment1.target=Computer(short)
 comment2.params=in\ out\ mem\ cpu1
-comment2.target=vc0(InputDevice,\ OutputDevice,\ Memory,\ CPU)
+comment2.target=Computer(InputDevice,\ OutputDevice,\ Memory,\ CPU)
 comment3.params=startPosition\ instructions\ trace
 comment3.target=void\ loadProgram(int,\ short[],\ boolean)
 comment4.params=
